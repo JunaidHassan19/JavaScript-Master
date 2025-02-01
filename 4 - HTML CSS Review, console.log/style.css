@@ -1,0 +1,18 @@
+.red_btn {
+    background-color: red;
+    color: white;
+    border: none;
+}
+.lession {
+    line-height: 5px;
+    opacity: 50%;
+    margin-top: 50px;
+}
+.button_div {
+    position: absolute;
+    left: 400px;
+    top: 10px;
+}
+.intro {
+    line-height: 5px;
+}
