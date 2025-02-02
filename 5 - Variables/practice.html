@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+
+  <h2>Practice of Variables</h2>
+
+  <button onclick="
+  console.log(`cartItems ${cartItems}`)
+  ">
+    Show Quantity
+  </button>
+
+  <button onclick="
+  cartItems = cartItems + 1;
+  console.log(`cartItems ${cartItems}`);
+  ">
+    Add to Cart
+  </button>
+
+  <button onclick="
+  cartItems = cartItems + 5;
+  console.log(`cartItems ${cartItems}`);
+  ">
+    +5 Items
+  </button>
+
+  <button onclick="
+  cartItems = cartItems + 10;
+  console.log(`cartItems ${cartItems}`);
+  ">
+    +10 Items
+  </button>
+
+  <button onclick="
+  cartItems = 0;
+  console.log(`cartItems ${cartItems}`);
+  ">
+    Reset Cart
+  </button>
+
+</head>
+<body>
+  <script>
+    let variable = 1;
+    console.log(variable);
+
+    let calculation = 2 + 2;
+    console.log(calculation);
+
+    let result = calculation + variable + 1;
+    console.log(result);
+
+    let message = "Hello world!";
+    console.log(message);
+
+    let output = message + 'new';
+    console.log(output);
+
+    const age = 18;
+    console.log(age);
+
+   var age1 = 20;
+   console.log(age1);
+
+   age1 = 50;
+   console.log(age1);
+
+   let cartItems = 0;
+  </script>
+</body>
+</html>
