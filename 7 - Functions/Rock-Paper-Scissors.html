@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Game using Functions</title>
+</head>
+
+<body>
+  <p>Rock Paper Scissors using Functions</p>
+  <button onclick="
+   playerMove('Paper');
+   ">Rock
+  </button>
+
+  <button onclick="
+    playGame('Paper');
+    ">
+    Paper
+  </button>
+
+  <button onclick="
+    playGame('Scissors');
+    ">
+    Scissors
+  </button>
+
+  <script>
+    function playGame(playerMove) {
+      const computerMove = (pickComputerMove());
+      let result = '';
+
+      if(playerMove === 'scissors') {
+        if(computerMove === 'Rock') {
+          result = 'You Lose.'; 
+        } else if (computerMove === 'Paper') {
+          result = 'You Win.';
+        } else if (computerMove === 'Scissors') {
+          result = 'Tie.';
+        }
+
+      } else if(playerMove === 'Paper') {
+        if(computerMove === 'Rock') {
+          result = 'You win.'; 
+        } else if (computerMove === 'Paper') {
+          result = 'Tie.';
+        } else if (computerMove === 'Scissors') {
+          result = 'You Lose.';
+        }
+        
+      } else if(playerMove === 'Rock') {
+          if(computerMove === 'Rock') {
+          result = 'tie.'; 
+        } else if (computerMove === 'Paper') {
+          result = 'You lose.';
+        } else if (computerMove === 'Scissors') {
+          result = 'You win.';
+        }
+      }
+     
+      alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result}`);
+    }
+
+
+    function pickComputerMove () {
+      const randomNum =  Math.random(); // Math.random generates a random number between 0 and 1
+      if(randomNum >= 0 && randomNum < 1 / 3) {
+         computerMove = ('Rock');
+      } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
+         computerMove= ('Paper');
+      } else if (randomNum >= 2 / 3 && randomNum < 1) {
+         computerMove = ('Scissors');
+      }
+        //  console.log(computerMove); // show the result in console
+
+         return computerMove; // Retun tatement it returns a value
+    }
+  </script>
+</body>
+
+</html>
