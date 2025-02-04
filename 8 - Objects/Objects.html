@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+<h1>Objects</h1>
+<div style="line-height: 5px;
+            opacity: 50%;"> 
+  <p>1. Objects = group related values together</p>
+  <p>2. Added a score to Rock Paper Scissore</p>
+  <p>3. Built-in objects (JSON, localStorage)</p>
+  <p>4. More details (null, auto-boxing, references)</p>
+  <p>5. Shortcuts (destructuring, shorthand property, shorthand method)</p>
+</div>
+
+
+   <script>
+    
+    const product = {
+      name: 'socks',
+      price: 1090
+    };
+    console.log(product);
+    console.log(product.name);//socks
+    console.log(product.price);//1090
+
+    //rename a property
+    product.name = 'cotton socks';
+    console.log(product);
+
+    //Add new property
+    product.newProperty = true; 
+    console.log(product);
+
+    //Delete a property
+    delete product.newProperty;
+    console.log(product);
+
+const product2 = {
+  name: 'shirt',
+  'delivery-time': '1 Day',
+  rating: {  // this is called nested Object , objec inside object
+    stars: 4.5,
+    count: 87
+  },
+  fun: function function1 () { // when we save functions inside an Object this is called Method
+    console.log('function inside Object');
+  }
+};
+
+console.log(product2);
+console.log(product2.name);
+console.log(product2['name']); //Bracker Notation
+console.log(product2['delivery-time']);
+
+console.log(product2.rating.count); //87
+product2.fun();
+
+console.log(typeof console); //Object
+console.log(typeof console.log); //Function
+
+
+console.log(JSON.stringify(product2)); // JavaScript to JSON
+
+const jsonString = JSON.stringify(product2);
+console.log(JSON.parse(jsonString)); // JSON to JavaScript
+
+
+console.log('Hello' .length);
+console.log('Hello' .toUpperCase());
+
+/* this is called Auto-Boxing.
+Auto-boxing is working other values like numbers and booleans
+the only thing is that Auto-Boxing does not work with null and undefined
+it will give us an error */ 
+
+
+//Objects are refrences
+const object1 = {
+  message: 'Hello'
+};
+const object2 = object1; // this is called copy by refrence
+
+object1.message = 'Good job';
+console.log(object1);
+console.log(object2);
+
+const object3 = {
+  message: 'Good job!'
+};
+console.log(object3 === object1); //false
+console.log(object2 === object1); //true
+
+//Shortcuts for Objects
+const object4 = {
+  message: 'Good job!',
+  price: 799
+};
+// const message = object4.message;
+const { message, price } = object4; //destrcturing
+console.log(message);
+console.log(price);
+
+//Shorthand property
+const object5 = {
+  // message: message
+  message
+};
+console.log(object5);
+
+//Shorthand method
+const object6 = {
+// message: message
+ message,
+// method: function function1() {
+ // console.log(method);
+// }
+  method() {
+    console.log('method');
+  }
+};
+console.log(object6);
+object6.method();
+  
+   </script>
+</body>
+</html>
