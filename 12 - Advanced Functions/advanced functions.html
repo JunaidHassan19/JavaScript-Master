@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+
+  <script>
+    function greeting() {
+      console.log('Hello');
+    }
+    greeting();
+
+    const num = 2;
+    const function1 = function () {
+      console.log('Hello2');
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    //=====We an ave a value in an object=====
+    const object1 = {
+      num: 2,
+      fun: function() { // This is called a method (function saved inside an object)
+        console.log('Hello3');
+      }
+    };
+    object1.fun();
+
+
+    //=====We can pass a value into a function=====
+    function display(param) {
+      console.log(param);
+    }
+    display(2);
+
+
+    //=====We can also pass function into a another function=====
+    function run(param) {
+      param();
+    }
+    run(function() {
+      console.log('Hello4');
+    });
+
+
+    //=====SetTimeout()=====
+    setTimeout(function() {
+      console.log('timeout');
+      console.log('timeout2');
+    }, 3000); // 1000 miliseconds = 1 second
+
+    //=====Asynchoroncus code=====
+    console.log('next line');
+
+
+    //=====setInterval()=====
+    setInterval(function() {
+      console.log('Interval') // it will keep running a function in the future
+    }, 3000);
+
+    console.log('next line2');
+
+
+    //=====Another way to loop through an array=====
+    [
+      'Code',
+      'Eat',
+      'Sleep'
+    ].forEach(function(value, index) {
+      console.log(index);
+      console.log(value);
+    });
+
+    // If value is 'Eat' we're going to skip it
+    [
+      'Code',
+      'Eat',
+      'Sleep'
+    ].forEach(function(value, index) {
+      if (value === 'Eat') {
+        return;
+      }
+
+      console.log(index);
+      console.log(value);
+    });
+  </script>
+</body>
+</html>
