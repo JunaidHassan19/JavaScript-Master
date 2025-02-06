@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <div>
+      <h1>Arrays and Loops</h1>
+      <p style="font-family: arial;
+                font-size: 20px;
+                margin-bottom: 2px;
+                ">In this lession</p>
+      <div style="
+      font-family: Arial;
+             line-height: 5px;
+             opacity: 0.5;
+             margin-top: 0px;
+             ">
+         <p>1. Arrays = list of values</p>
+         <p>2. Loops (While loop, For loop)</p>
+         <p>3. Accumulator Pattern</p>
+         <p>4. Created a Todo List project</p>
+         <p>5. Arrays are references, destruturing</p>
+         <p>6. More Features of loops: break, continue loops inside a function</p>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+    const array1 = [1, 2, 3] //reference
+    //const array2 = array1; // output [1, 2, 3, 4]
+    const array2 = array1.slice(); // output [1, 2, 3]
+    array2.push(4);
+    console.log(array1);
+    console.log(array2);
+
+    //======Shortcut: Destructuring
+    const [firstValue, secondValue] = [1, 2, 3];
+    //Get the first and second value out of this Array
+
+    /*=======================
+    More details about loops
+    1. break = exit a loop early
+    2. continue = skip 1 iteration
+    */
+
+    for(let i = 1; i <= 10; i++) {
+      console.log(i)
+      //when i=8 stop the loop
+      if(i === 8) {
+        break;
+      }
+    }
+
+    for(let i = 1; i <= 10; i++) {
+      if(i === 3) {
+        continue;
+      }
+      console.log(i)
+    }
+
+
+
+    let i = 1;
+
+    while(i <= 10) {
+      if(i % 3 === 0) { //Skip numbers that are divisible by 3(3, 6, 9)
+      i++;  
+      continue;
+      }
+      console.log(i);
+      i++;
+    }
+
+
+    //=====How to us loops with functions=====
+
+    function doubleArray(nums) {
+      const numsDoubled = [];
+
+      for(let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        //if we see the number 0 stop this early
+        if(num === 0) {
+          return numsDoubled;
+        }
+        numsDoubled.push(num * 2);
+      }
+      return numsDoubled;
+  }
+  console.log(doubleArray([1, 1, 3]));
+  console.log(doubleArray([5, 5, 10, 5, 0, 50]));
+      
+  </script>
+</body>
+</html>
