@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 2 - Advance Functions</title>
+</head>
+<body>
+  <h1>Part-2 Advanced Functions</h1>
+  <div style="
+        line-height: 5px;
+        font-family: Arial;
+        opacity: 0.5;">
+    <p>In this lession</p>
+    <p>1. Functions are values</p>
+    <p>2. setTimeout(), setINterval()</p>
+    <p>3. .forEach()</p>
+    <p>4. Arrow functions, .addEventListener()</p>
+    <p>5. .filter(), .map()</p>
+    <p>6. Closure</p>
+  </div>
+
+
+
+
+
+  <!--------------------------------------------------->
+  <button onclick="" class="js-button">Click</button>
+  
+  <script>
+    const buttonElement = document.querySelector('.js-button');
+
+    buttonElement.addEventListener('click', () => {
+      console.log('click');
+    });
+
+  //Lets add multiple event listeners for an event
+  const eventListener = () => {
+      console.log('click2');
+    };
+
+    buttonElement.addEventListener('click', eventListener);
+
+  //We can remove an event listener
+          //using a method called (.removeEventListener())
+    buttonElement.removeEventListener('click', eventListener);
+    
+
+    //======Arrow Functions======
+
+    const regularFunction = function(param, param2) {
+      console.log('hello');
+      return 5;
+    };
+
+    const arrowFunction =  (param, param2) => {
+      console.log('Hello');
+      return 5;
+    };
+    arrowFunction();
+
+    const oneParam = param => {
+      console.log(param + 1);
+
+    };
+    oneParam(2);
+
+    const oneLine = () =>  2 + 3; // one line Arrow Function
+    console.log(oneLine());
+
+    /*
+    //====Inside An object====
+    const object2 = {
+      method : () => {
+       
+      },
+      method() {    /// shorthand method
+
+      }
+    };
+    */
+   
+    //======2 More array methods: .filter() and .map()======
+    //  ----.filter()
+    console.log([1, -3, 5].filter((value, index) => {
+      // return false;
+      return true;
+    }));
+
+    // remove Negative numbers to the array
+    console.log([1, -3, 5].filter((value, index) => {
+      /*
+      if(value >= 0) {
+        return true;
+      } else {
+        return false;
+      }
+        OR
+        */
+      return value >= 0;
+    }));
+
+
+    // ----.map()
+    console.log([1, 1, 3].map((value, index) => {
+      return value + 10;
+    }));
+
+    //Shortcuts of arrow function
+    console.log([1, 1, 3].map(value =>  value + 10));
+  </script>
+</body>
+</html>
