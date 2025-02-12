@@ -14,6 +14,11 @@ Welcome to the JavaScript Master Course repository! This course is designed to h
 
 This course covers advanced JavaScript concepts. Each project is carefully crafted to enhance your coding skills and deepen your understanding of JavaScript.
 
+## Find me on
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](http://junaidhassan19.me/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/junaidhassan19/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/Gargantua_10011)
+
 ## Projects
 
 1. **To-Do List**
